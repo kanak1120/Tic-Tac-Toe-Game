@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h1{
+        font-style: italic;
+    }
+  </style>
+  
+</head>
+<body>
+  <main class="game">
+    <h1>Tic Tac Toe</h1>
+    <p id="status" aria-live="polite"></p>
+
+    <div class="board" id="board">
+      <button class="cell" data-index="0" aria-label="Row 1, column 1"></button>
+      <button class="cell" data-index="1" aria-label="Row 1, column 2"></button>
+      <button class="cell" data-index="2" aria-label="Row 1, column 3"></button>
+      <button class="cell" data-index="3" aria-label="Row 2, column 1"></button>
+      <button class="cell" data-index="4" aria-label="Row 2, column 2"></button>
+      <button class="cell" data-index="5" aria-label="Row 2, column 3"></button>
+      <button class="cell" data-index="6" aria-label="Row 3, column 1"></button>
+      <button class="cell" data-index="7" aria-label="Row 3, column 2"></button>
+      <button class="cell" data-index="8" aria-label="Row 3, column 3"></button>
+    </div>
+
+    <div class="scores">
+      <span>X wins: <strong id="scoreX">0</strong></span>
+      <span>Draws: <strong id="scoreD">0</strong></span>
+      <span>O wins: <strong id="scoreO">0</strong></span>
+    </div>
+
+    <button id="reset">New game</button>
+  </main>
+
+  <!-- Result popup -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-icon" id="popupIcon"></div>
+      <h2 id="popupTitle"></h2>
+      <p id="popupMessage"></p>
+      <button id="playAgain">Play again</button>
+    </div>
+  </div>
+
+  <footer>Made By Kanak Ranjan</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
